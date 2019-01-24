@@ -1,4 +1,3 @@
-import Koa from "koa";
 import { config } from "dotenv";
 import { resolve } from "path";
 import { startServer } from "./lib/server";

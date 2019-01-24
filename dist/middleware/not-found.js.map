@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/middleware/not-found.js"],"names":["notFoundHandler","ctx"],"mappings":";;;;;;;;;AAAA;;AAIO,eAAeA,eAAf,CAA+BC,GAA/B,EAAoC;AACvC;AACH","sourcesContent":["import {\r\n    notFound\r\n} from \"boom\";\r\n\r\nexport async function notFoundHandler(ctx) {\r\n    return ;\r\n}"],"file":"not-found.js"}
