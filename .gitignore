@@ -1,0 +1,12 @@
+# JAVASCRIPT DEPENDENCIES
+node_modules
+
+# ENVIRONMENT VARIABLES
+.env.production
+
+# OS METADATA
+.DS_Store
+Thumbs.db
+
+# LOG FILES
+*.log
