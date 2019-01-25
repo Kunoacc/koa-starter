@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kunoacc/myspeed.git"
+    "url": "git+https://github.com/kunoacc/koa-starter.git"
   },
   "author": "nellyatuonwu@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kunoacc/myspeed/issues"
+    "url": "https://github.com/kunoacc/koa-starter/issues"
   },
-  "homepage": "https://github.com/kunoacc/myspeed#readme",
+  "homepage": "https://github.com/kunoacc/koa-starter#readme",
   "dependencies": {
     "@koa/cors": "^2.2.3",
     "awilix": "^4.1.0",
@@ -76,7 +76,7 @@
       [
         "@babel/plugin-proposal-decorators",
         {
-          "decoratorsBeforeExport": true
+          "legacy": true
         }
       ]
     ],

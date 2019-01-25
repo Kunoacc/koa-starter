@@ -1,7 +1,6 @@
 import { createServer } from "http";
 import Koa from "koa";
 import cors from "@koa/cors";
-import boom from "boom";
 import bodyparser from "koa-bodyparser";
 import logger from "koa-logger"
 import helmet from "koa-helmet";
@@ -12,7 +11,6 @@ import { log } from "./log";
 import { errorHandler } from "../middleware/error";
 import { registerContext } from "../middleware/register-context";
 import { configureContainer } from "./container";
-import { notFoundHandler } from "../middleware/not-found";
 
 export async function startServer(){
     log.debug('Starting server...')
@@ -29,7 +27,7 @@ export async function startServer(){
     .use(registerContext)
     .use(loadControllers('../routes/*.js', {cwd: __dirname}))
     .use(helmet())
-    .use(async ctx => notFound().data)
+    .use(async ctx => ctx.body = notFound('The route wasn\'t found').output.payload)
 
     // Create HTTP Server
     const server = createServer(app.callback());

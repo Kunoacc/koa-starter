@@ -1,4 +1,4 @@
-import { createContainer, asValue, Lifetime, InjectionMode } from "awilix";
+import { createContainer, asValue, Lifetime, InjectionMode, asClass } from "awilix";
 import { log } from "./log";
 
 const modulesToLoad = [
@@ -15,7 +15,7 @@ export function configureContainer() {
         formatName: 'camelCase'
     }).register(
         {
-            logger: asValue(log)
+            logger: asValue(log),
         }
     )
 }
